@@ -352,7 +352,7 @@ class VoiceDetector:
         
         return DetectionResult(
             classification=classification,
-            confidence_score=round(confidence, 2),
+            confidence_score=float(f"{confidence:.2f}"),
             explanation=explanation,
             feature_scores=feature_scores
         )

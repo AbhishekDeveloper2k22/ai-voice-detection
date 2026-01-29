@@ -75,6 +75,24 @@ class VoiceDetectionSuccessResponse(BaseModel):
         ...,
         description="Short reason for the classification decision"
     )
+    
+    model_config = {
+        "json_schema_extra": {
+            "example": {
+                "status": "success",
+                "language": "Tamil",
+                "classification": "AI_GENERATED",
+                "confidenceScore": 0.93,
+                "explanation": "Detected AI indicators: unnatural pitch consistency"
+            }
+        }
+    }
+    
+    def model_dump(self, **kwargs):
+        """Override to format confidenceScore with 2 decimal places"""
+        data = super().model_dump(**kwargs)
+        data['confidenceScore'] = round(data['confidenceScore'], 2)
+        return data
 
 
 class VoiceDetectionErrorResponse(BaseModel):
