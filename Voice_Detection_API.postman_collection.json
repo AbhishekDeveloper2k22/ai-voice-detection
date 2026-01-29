@@ -1,0 +1,237 @@
+{
+    "info": {
+        "_postman_id": "voice-detection-api",
+        "name": "AI Voice Detection API",
+        "description": "API for detecting AI-generated vs Human voices in Tamil, English, Hindi, Malayalam, and Telugu",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "variable": [
+        {
+            "key": "baseUrl",
+            "value": "http://localhost:8000"
+        },
+        {
+            "key": "apiKey",
+            "value": "sk_test_123456789"
+        }
+    ],
+    "item": [
+        {
+            "name": "Health Check",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/api/health",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "health"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Root Info",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "{{baseUrl}}/",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        ""
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Voice Detection - English",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-api-key",
+                        "value": "{{apiKey}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"English\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"SUQzBAAAAAAAIlRTU0UAAAAOAAADTGF2ZjYyLjMuMTAwAAAAAAAAAAAAAAD/83DAAAAAAAAAAAAASW5mbwAAAA8AAABPAAAg9QAICw8SEhUYGx4eIiUoKysuMTU4ODs+QUFESEtOTlFUV1tbXmFkZ2dqbnFxdHd6fn6BhIeKio2RlJeXmp2goKSnqq2tsLO3urq9wMPGxsrN0NDT1tnd3eDj5unp7PDz9vb5/P8AAAAATGF2YzYyLjExAAAAAAAAAAAAAAAAJAM8AAAAAAAAIPUJUJ1kAAAAAAAAAAAAAAAAAP/zQMQAE8hqjB9YGABWSSWg3tAT2Lo2GAxoUalGgxmAaSmMJbdItibvv/G5fSUlJSUlJSYAmD4Pg++UOcH/DEp7+U8P8CO4f5R3P9Hv6P4PgQEAwoMA+H8oCHf0KgAQJawIBAKBQIBQ\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Voice Detection - Tamil",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-api-key",
+                        "value": "{{apiKey}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"Tamil\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"YOUR_BASE64_AUDIO_HERE\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Voice Detection - Hindi",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-api-key",
+                        "value": "{{apiKey}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"Hindi\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"YOUR_BASE64_AUDIO_HERE\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Voice Detection - Malayalam",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-api-key",
+                        "value": "{{apiKey}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"Malayalam\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"YOUR_BASE64_AUDIO_HERE\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Voice Detection - Telugu",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    },
+                    {
+                        "key": "x-api-key",
+                        "value": "{{apiKey}}"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"Telugu\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"YOUR_BASE64_AUDIO_HERE\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Test Without API Key (Should Fail)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"language\": \"English\",\n    \"audioFormat\": \"mp3\",\n    \"audioBase64\": \"test\"\n}"
+                },
+                "url": {
+                    "raw": "{{baseUrl}}/api/voice-detection",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "api",
+                        "voice-detection"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
